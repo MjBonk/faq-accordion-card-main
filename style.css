@@ -5,42 +5,89 @@
 }
 
 :root{
-	--ff-400: 'Kumbh Sans', sans-serif;
-	--ff-700: 'Kumbh Sans', bold;
 	--clr-font-light: hsl(240, 6%, 50%);
 	--clr-font: hsl(237, 12%, 33%);
 	--clr-font-dark: hsl(238, 29%, 16%);
-
+	
 	--clr-accent:  hsl(14, 88%, 65%);
 	--clr-dividers: hsl(240, 5%, 91%);
-
+	
 	--clr-gradient-top: hsl(273, 75%, 66%);
 	--clr-gradient-bottom: hsl(240, 73%, 65%);
 }
 
-p{
-	font-size: 12px;
-	font-family: var(--ff-400);
-}
 
-
-
-.container{
+body{
 	height: 100vh;
+	width: 100vw;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	background-image: linear-gradient(var(--clr-gradient-top), var(--clr-gradient-bottom));
+	font-family: 'Kumbh Sans',sans-serif;
+	font-size: 12px;
 }
 
+.svgs{
+	margin: -10rem -1rem 0 -1rem;
+}
+.svg-woman{
+	width: 15rem;
+	margin-bottom: -4.5rem;
+	z-index: 2;
+}
 .wrapper{
+	padding: 3rem 1.5rem;
 	width: 85%;
-	height: 30rem;
 	background-color: white;
 	border-radius: 1.5rem;
 	text-align: center;
 }
 
-.svg-woman{
-	width: 80%;
+
+
+/* -------------------------ACCORDION---------------------- */
+
+.tab::after{
+	content: "";
+	display: block;
+	height: 1px;
+	width: 100%;
+	background-color: var(--clr-dividers);
 }
+.tab__panel{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1rem 0;
+}
+.tab__header{
+	color: var(--clr-font-light);
+}
+
+.tab__toggle{
+	display: none;
+}
+.tab__content{
+	height: 0;
+	overflow: hidden;
+	color: var(--clr-font-light);
+	text-align: left;
+	font-size: 11px;
+	width: 90%;
+}
+.tab__toggle:checked ~ .tab__content {
+	height: auto;
+	padding-bottom: 1.5rem;
+}
+
+.tab__toggle:checked ~ .tab__panel > .tab__header {
+	color: var(--clr-font-dark);
+	font-weight: bold;
+}
+.tab__toggle:checked ~ .tab__panel > .tab__icon {
+	transform: rotate(180deg);
+}
+
+
