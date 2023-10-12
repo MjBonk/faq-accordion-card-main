@@ -34,7 +34,7 @@ body {
 h1 {
 	text-align: center;
 	font-size: 2rem;
-	padding-bottom: 1rem;
+	padding: 1rem 0;
 }
 
 p {
@@ -68,60 +68,21 @@ p {
 	margin-bottom: -4.5rem;
 }
 
-.svg-desktop {
+.svg-desktop,.svg-desktop__box {
 	display: none;
-	position: absolute;
-	top: 0;
 }
 
-.svg-desktop__woman,
-.svg-desktop__shadow,
-.svg-desktop__box{
-	position: absolute;
-}
-
-.svg-desktop__shadow {
-	top: -20rem;
-	left: -36rem;
-	z-index: 1;
-}
-.svg-desktop__woman {
-	top: 3rem;
-	left: -5rem;
-	z-index: 2;
-}
-.svg-desktop__box{
-	top: 11.5rem;
-	z-index: 3;
-	animation: box 6s ease-in-out infinite;
-}
-
-@keyframes box{
-	0%{
-		left: -5.5rem;
-	}
-
-	50%{
-		left: -7rem;
-	}
-
-	100%{
-		left: -5.5rem;
-	}
-}
-
-
+/* DESKTOP */
 @media (min-width:45rem) {
 	.wrapper {
 		flex-direction: row;
 		padding: 0;
-		margin: 0;
+		margin: 0 4rem;
 	}
 
-	.accordion-title__wrapper{
-		width: 50%;
-		padding: 2rem 5rem 2rem 0;
-	
+	.accordion-title__wrapper {
+		max-width: 50%;
+		padding: 2rem 9% 2rem 0;
 	}
 
 	.svg-wrapper {
@@ -137,6 +98,45 @@ p {
 		position: relative;
 		overflow: hidden;
 		min-height: 30rem;
+	}
+	.svg-desktop__woman,
+	.svg-desktop__shadow,
+	.svg-desktop__box {
+		position: absolute;
+	}
+
+	.svg-desktop__shadow {
+		top: 0;
+		top: -20rem;
+		left: -36rem;
+		z-index: 1;
+	}
+
+	.svg-desktop__woman {
+		top: 3rem;
+		left: -5rem;
+		z-index: 2;
+	}
+
+	.svg-desktop__box {
+		display: block;
+		top: 11.5rem;
+		z-index: 3;
+		animation: box 6s ease-in-out infinite;
+	}
+
+	@keyframes box {
+		0% {
+			left: -5.5rem;
+		}
+
+		50% {
+			left: -7rem;
+		}
+
+		100% {
+			left: -5.5rem;
+		}
 	}
 
 	h1 {
@@ -170,8 +170,10 @@ p {
 	text-align: left;
 	font-size: 13px;
 }
-.accordion__header:hover{
+
+.accordion__header:hover {
 	color: var(--clr-accent);
+	cursor: pointer;
 }
 
 
