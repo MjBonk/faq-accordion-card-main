@@ -121,11 +121,12 @@ p {
 	.svg-desktop__box {
 		display: block;
 		top: 11.5rem;
+		left: -6rem;
 		z-index: 3;
 		animation: box 6s ease-in-out infinite;
 	}
 
-	@keyframes box {
+/* 	@keyframes box {
 		0% {
 			left: -5.5rem;
 		}
@@ -137,7 +138,7 @@ p {
 		100% {
 			left: -5.5rem;
 		}
-	}
+	} */
 
 	h1 {
 		text-align: left;
