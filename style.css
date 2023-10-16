@@ -158,7 +158,7 @@ p {
 .accordion__content p{
 	overflow: hidden;
 }
-.accordion__toggle:checked~.accordion__content {
+.accordion__toggle:checked ~ .accordion__content {
 	grid-template-rows: 1fr;
 	padding-bottom: 1rem;
 }
