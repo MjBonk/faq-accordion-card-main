@@ -17,6 +17,7 @@ This is a solution to the [FAQ accordion card challenge on Frontend Mentor](http
 ## Overview
 I chose to make this challenge without javascript purely because i don't know javascript yet :) 
 I made the accordion using checkboxes, the catch is that you can only (as far as i know) press the text to ”check it”/open the accordion tab. 
+EDIT: I managed to do it with instead of height i used grid, from grid-template-rows: 0fr; to 1fr; 
 
 I also would like the accordion content height to adapt to the text within it but i can't make a transition from height:0; to height:auto; 
 EDIT: I figuerd it out using grid instead of height so the content goes from grid-template-rows: 0; to 1fr! :)
