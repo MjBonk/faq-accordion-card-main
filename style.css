@@ -54,7 +54,7 @@ p {
 	position: relative;
 	min-height: 30rem;
 	width: 100%;
-	max-width: 60rem;
+	max-width: 40rem;
 }
 
 .svg-mobile {
@@ -72,12 +72,21 @@ p {
 	display: none;
 }
 
+
+
+
+
 /* DESKTOP */
-@media (min-width:45rem) {
+@media (min-width:57rem) {
+	h1 {
+		text-align: left;
+		padding-bottom: 2rem;
+	}
 	.wrapper {
 		flex-direction: row;
 		padding: 0;
 		margin: 0 4rem;
+		max-width: 60rem;
 	}
 
 	.accordion-title__wrapper {
@@ -88,6 +97,9 @@ p {
 	.svg-wrapper {
 		width: 50%;
 	}
+
+
+
 
 	.svg-mobile {
 		display: none;
@@ -139,10 +151,6 @@ p {
 		}
 	}
 
-	h1 {
-		text-align: left;
-		padding-bottom: 2rem;
-	}
 }
 
 
